@@ -1,0 +1,19 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+}
+
+.Main {
+  width: 800px;
+  background-color: red;
+}
+
+.Main-title {
+  text-align: center;
+  font-size: 26px;
+  line-height: 50px;
+  font-weight: 500;
+}
