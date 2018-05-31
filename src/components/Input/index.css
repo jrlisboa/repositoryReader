@@ -1,0 +1,29 @@
+.Input {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.Input-form {
+  width: 63%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Input-form__text-field {
+  width: 50%;
+  flex: 0 0 100%;
+}
+
+.Input-form__button {
+  width: 50%;
+  flex: 0 0 85%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Input-form__submmit {
+  width: 90%;
+}
