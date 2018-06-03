@@ -24,6 +24,25 @@
   justify-content: flex-end;
 }
 
-.Input-form__submmit {
+.Input-form__submit {
   width: 90%;
+}
+
+.Input__progress {
+  margin-right: 10px;
+  background-color: red;
+  width: 65%;
+  margin-left: 17.5%;
+}
+
+.MuiLinearProgress-root-54 {
+  background-color: #ccc !important;
+}
+
+.MuiLinearProgress-bar1Indeterminate-65 {
+  background-color: #1a1a1a !important;
+}
+
+.MuiLinearProgress-bar2Indeterminate-66 {
+  background-color: #1a1a1a !important;
 }

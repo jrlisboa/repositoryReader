@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
-import Main from '../Main';
+import { Provider } from 'mobx-react';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
 
-import TestStore
+import Main from '../Main';
+import Repositories from '../Repositories';
+import GitStore from '../../stores/git';
 
 const stores = {
-
-}
+  git: new GitStore(),
+};
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Provider store={..stores}>
-          <Main/>
-        </Provider>
+        <Router>
+          <Provider {...stores}>
+            <div>
+              <Route exact path="/" component={Main}/>
+              <Route exact path="/repositories" component={Repositories}/>
+            </div>
+          </Provider>
+        </Router>
       </div>
     );
   }
