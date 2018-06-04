@@ -1,0 +1,40 @@
+.User {
+  display: flex;
+  width: 800px;
+  margin-top: 60px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+
+.User__image{
+  width: 150px;
+  margin-right: 50px;
+  border-radius: 100%;
+}
+
+.User__image img{
+  width: 150px;
+  margin-right: 50px;
+  border-radius: 100%;
+}
+
+.User__info {
+  flex: 0 0 100%;
+}
+
+.User__info h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.User__info h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.User__info h6 {
+  font-size: 16px;
+  font-weight: 400;
+}

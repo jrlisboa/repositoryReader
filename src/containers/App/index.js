@@ -10,7 +10,7 @@ import Repositories from '../Repositories';
 import GitStore from '../../stores/git';
 
 const stores = {
-  git: new GitStore(),
+  git: GitStore,
 };
 
 class App extends Component {

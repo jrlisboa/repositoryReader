@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import autobind from 'autobind-decorator';
+import { Redirect } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 
 import TextField from '@material-ui/core/TextField';
@@ -16,7 +17,7 @@ class Main extends Component {
     super(props);
 
     this.state = {
-      username: '',
+      username: 'reactjs',
       isLoading: false,
     };
   }
@@ -32,21 +33,27 @@ class Main extends Component {
   @autobind
   handleLoadRepositories(e) {
     e.preventDefault();
-    const { fetchUserData } = this.props.git;
+    const { git } = this.props;
     const { username } = this.state;
 
     const onFetch = () => this.setState({ isLoading: false });
 
+    if (!username) return;
     this.setState({isLoading: true});
-    fetchUserData(username, onFetch);
+    git.fetchUser(username, onFetch);
   }
 
   render() {
     const { isLoading } = this.state;
+    const { user, repos } = this.props.git;
     const progress = (
       <LinearProgress
         className="Input__progress"/>
     );
+
+    if (user && repos) {
+      return <Redirect to="/repositories" />;
+    }
 
     return (
       <div>
